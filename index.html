@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI isn't a strategy | Amanda Jelinek</title>
+  <meta name="description" content="Understand your processes, tools and people first. That's what determines where AI fits into your business.">
+  <meta property="og:title" content="AI isn't a strategy | Amanda Jelinek">
+  <meta property="og:description" content="Understand your processes, tools and people first. That's what determines where AI fits into your business.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap">
+  <style>
+    :root {
+      --bg: #111827;
+      --bg-deep: #0F172A;
+      --card: #1F2937;
+      --ink: #F9FAFB;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
+      --accent: #FCD34D;
+      --violet: #7C3AED;
+      --violet-hover: #6D28D9;
+      --amber: #F59E0B;
+      --badge-ink: #111111;
+      --serif: Fraunces, Georgia, "Times New Roman", serif;
+      --sans: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --pad-x: 120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--body);
+      font-family: var(--sans);
+      letter-spacing: -0.012em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .wordmark {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .divider {
+      width: 160px;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--violet), var(--amber));
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      align-self: flex-start;
+      min-height: 60px;
+      padding: 0 32px;
+      border-radius: 999px;
+      background: var(--violet);
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn:hover { background: var(--violet-hover); }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Section 1: hook */
+    .hero {
+      min-height: 720px;
+      padding: 72px var(--pad-x);
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .hero-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1040px;
+      padding-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 104px;
+      line-height: 1;
+      letter-spacing: -0.025em;
+    }
+
+    .tagline {
+      font-size: 36px;
+      line-height: 1.35;
+      color: var(--body);
+    }
+
+    /* Section 2: the work */
+    .work {
+      background: var(--bg-deep);
+      padding: 120px var(--pad-x);
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    .work-intro {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+    }
+
+    .work h2 {
+      font-size: 60px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pillar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px;
+      background: var(--card);
+      border-radius: 16px;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      background: var(--amber);
+      color: var(--badge-ink);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .pillar h3 {
+      font-size: 36px;
+      line-height: 1.1;
+    }
+
+    .pillar p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    /* Section 3: the stakes */
+    .stakes {
+      padding: 120px var(--pad-x) 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .stakes h2 {
+      font-size: 80px;
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      max-width: 1100px;
+    }
+
+    .stakes p {
+      font-size: 28px;
+      line-height: 1.45;
+      max-width: 860px;
+    }
+
+    /* About block */
+    .about {
+      display: flex;
+      align-items: flex-start;
+      gap: 36px;
+      max-width: 900px;
+      margin-top: 12px;
+      padding: 36px;
+      background: var(--card);
+      border-radius: 20px;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .stakes .about-text p {
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .about strong { color: var(--ink); }
+
+    .about a {
+      align-self: flex-start;
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .about a:hover { color: #FEF3C7; }
+
+    .about a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* Tablet */
+    @media (max-width: 1100px) {
+      :root { --pad-x: 64px; }
+      .hero h1 { font-size: 80px; }
+      .stakes h2 { font-size: 64px; }
+      .pillars { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      :root { --pad-x: 28px; }
+
+      .wordmark { font-size: 12px; }
+      .divider { width: 96px; height: 3px; }
+
+      .btn {
+        align-self: stretch;
+        justify-content: center;
+        min-height: 56px;
+        padding: 0 24px;
+        font-size: 17px;
+      }
+
+      .hero {
+        min-height: 580px;
+        min-height: 85svh;
+        padding-top: 40px;
+        padding-bottom: 44px;
+        gap: 32px;
+      }
+      .hero-body { gap: 28px; padding-bottom: 0; }
+      .hero h1 { font-size: 52px; line-height: 1.02; letter-spacing: -0.02em; }
+      .tagline { font-size: 22px; line-height: 1.4; }
+
+      .work { padding-top: 64px; padding-bottom: 64px; gap: 32px; }
+      .work-intro { gap: 14px; }
+      .work h2 { font-size: 34px; line-height: 1.12; letter-spacing: -0.015em; }
+      .pillars { gap: 16px; }
+      .pillar { padding: 24px; }
+      .badge { width: 44px; height: 44px; font-size: 17px; }
+      .pillar h3 { font-size: 28px; }
+      .pillar p { font-size: 17px; }
+
+      .stakes { padding-top: 64px; padding-bottom: 72px; gap: 24px; }
+      .stakes h2 { font-size: 42px; line-height: 1.06; letter-spacing: -0.02em; }
+      .stakes p { font-size: 19px; line-height: 1.5; }
+
+      .about { flex-direction: column; gap: 18px; padding: 24px; margin-top: 8px; }
+      .about img { width: 72px; height: 72px; }
+      .stakes .about-text p { font-size: 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wordmark">Amanda Jelinek</div>
+      <div class="hero-body">
+        <h1 id="hero-title">AI <em>isn't</em> a strategy.</h1>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="tagline">AI is a capability, not a direction.</p>
+      </div>
+    </section>
+
+    <section class="work" aria-labelledby="work-title">
+      <div class="work-intro">
+        <div class="wordmark">Start with the business</div>
+        <h2 id="work-title">Before you pick the AI, understand what it's walking into.</h2>
+      </div>
+      <ul class="pillars">
+        <li class="pillar">
+          <div class="badge" aria-hidden="true">01</div>
+          <h3>Processes</h3>
+          <p>How work actually moves, where it stalls, and what gets done twice.</p>
+        </li>
+        <li class="pillar">
+          <div class="badge" aria-hidden="true">02</div>
+          <h3>Tools</h3>
+          <p>What you already pay for, what's underused, and what doesn't connect to anything else.</p>
+        </li>
+        <li class="pillar">
+          <div class="badge" aria-hidden="true">03</div>
+          <h3>People</h3>
+          <p>Who owns what, where the load sits, and what only lives in someone's head.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="stakes" aria-labelledby="stakes-title">
+      <div class="divider" aria-hidden="true"></div>
+      <h2 id="stakes-title">AI can't fix a problem you <em>haven't found.</em></h2>
+      <p>Whether it closes a gap, scales what's working, or opens something new, AI only pays off when it fits how your business actually runs.</p>
+      <div class="about">
+        <img src="amanda-headshot.jpg" alt="Amanda Jelinek" width="150" height="150">
+        <div class="about-text">
+          <p><strong>I'm Amanda Jelinek.</strong> I've spent my career inside business processes and software, from developer to advisor for Fortune 500 companies and financial institutions. I help mid-market businesses find where AI actually belongs before they spend on it.</p>
+          <p><strong>Book a 30-minute conversation.</strong> We'll look at where your processes, tools and people are getting in each other's way, and whether AI is the right fix.</p>
+          <a href="https://www.linkedin.com/in/amanda-jelinek/">Connect on LinkedIn</a>
+        </div>
+      </div>
+      <!-- BOOKING LINK: replace the href below with your Calendly URL -->
+      <a class="btn" href="mailto:ai@amandajelinek.com?subject=Booking%20an%20AI%20strategy%20conversation">
+        Find where AI fits
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
