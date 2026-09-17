@@ -11,7 +11,7 @@ Single-page site for Amanda Jelinek's AI strategy consulting.
 
 ## Before going live
 
-- [ ] Replace the "Book with me" link with the Calendly URL. Search `index.html` for `BOOKING LINK`.
+- [x] Replace the "Book with me" link with the Microsoft Bookings URL.
 - [ ] Confirm the brand violet (`--violet: #7C3AED`) and fonts (Fraunces, DM Sans) against the brand templates. All colors are variables at the top of the `<style>` block.
 - [ ] Confirm the call length in the About block (currently 30 minutes).
 - [ ] Add a social preview image (`og:image`) for LinkedIn sharing.
